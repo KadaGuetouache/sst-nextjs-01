@@ -1,0 +1,80 @@
+SST 3.5.13  ready!
+
+➜  App:        leads-landing
+   Stage:      kada
+
+~  Deploy
+
+|  Created     default_6_66_2 pulumi:providers:aws
+|  Created     MySecret sst:sst:Secret
+|  Created     default pulumi:providers:pulumi-nodejs
+|  Created     MyWeb sst:aws:Nextjs → MyWebAssets sst:aws:Bucket
+|  Created     MyWeb sst:aws:Nextjs → MyWebS3AccessControl sst:aws:OriginAccessControl
+|  Created     default_4_16_6 pulumi:providers:random
+|  Created     MyWeb sst:aws:Nextjs → MyWebAssetsId random:index:RandomId
+Next.js version : 14.2.23
+OpenNext v3.3.0
+
+┌─────────────────────────────────┐
+│ OpenNext — Building Next.js app │
+└─────────────────────────────────┘
+
+yarn run v1.22.22
+$ next build
+  ▲ Next.js 14.2.23
+
+   Creating an optimized production build ...
+|  Created     MyWeb sst:aws:Nextjs → MyWebAssetsBucket aws:s3:BucketV2 (10.5s)
+|  Created     MyWeb sst:aws:Nextjs → MyWebAssetsPublicAccessBlock aws:s3:BucketPublicAccessBlock
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+|  Created     MyWeb sst:aws:Nextjs → MyWebAssetsCors aws:s3:BucketCorsConfigurationV2 (1.9s)
+|  Created     MyWeb sst:aws:Nextjs → MyWebAssetsPolicy aws:s3:BucketPolicy (1.5s)
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Failed to compile.
+
+.sst/platform/src/components/aws/apigatewayv1.ts:1181:39
+Type error: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+
+[0m [90m 1179 |[39m[0m
+[0m [90m 1180 |[39m         [90m// filter unique resource ids[39m[0m
+[0m[31m[1m>[22m[39m[90m 1181 |[39m         [36mconst[39m uniqueResourceIds [33m=[39m [[33m...[39m[36mnew[39m [33mSet[39m(resourceIds)][33m;[39m[0m
+[0m [90m      |[39m                                       [31m[1m^[22m[39m[0m
+[0m [90m 1182 |[39m[0m
+[0m [90m 1183 |[39m         [90m// create cors integrations for the paths[39m[0m
+[0m [90m 1184 |[39m         [36mreturn[39m uniqueResourceIds[33m.[39mmap((resourceId) [33m=>[39m {[0m
+Static worker exited with code: 1 and signal: null
+error Command failed with exit code 1.
+node:internal/errors:984
+  const err = new Error(message);
+              ^
+
+Error: Command failed: yarn build
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)
+    at checkExecSyncError (node:child_process:890:11)
+    at Object.execSync (node:child_process:962:15)
+    at buildNextjsApp (file://home/mrgren/.npm/_npx/881ccf649442b03e/node_modules/@opennextjs/aws/dist/build/buildNextApp.js:15:8)
+    at build (file://home/mrgren/.npm/_npx/881ccf649442b03e/node_modules/@opennextjs/aws/dist/build.js:31:5)
+    at async file://home/mrgren/.npm/_npx/881ccf649442b03e/node_modules/@opennextjs/aws/dist/index.js:9:1 {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 19280,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v20.14.0
+npm notice
+npm notice New major version of npm available! 10.7.0 -> 11.0.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.0.0
+npm notice To update run: npm install -g npm@11.0.0
+npm notice
+|  Error       MyWeb sst:aws:Nextjs → MyWebBuild sst:Run
+|  command exited with code 1
+
+✕  Failed    
+   MyWeb sst:aws:Nextjs → MyWebBuild sst:Run
+   command exited with code 1
+

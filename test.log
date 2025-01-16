@@ -1,0 +1,58 @@
+SST 3.5.13  ready!
+
+➜  App:        leads-landing
+   Stage:      test
+
+~  Deploy
+
+|  Error       
+|  SecretMissingError: Set a value for MySecret with `sst secret set MySecret <value>`
+|      at new Secret (file:///home/kada/Development/playground/leads-landing/.sst/platform/src/components/secret.ts:120:13)
+|      at run (file:///home/kada/Development/playground/leads-landing/sst.config.ts:16:20)
+|      at run (file:///home/kada/Development/playground/leads-landing/.sst/platform/src/auto/run.ts:19:26)
+|      at file:///home/kada/Development/playground/leads-landing/eval.ts:4:28
+|      at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+|      at ModuleLoader.import (node:internal/modules/esm/loader:316:24) {
+|    secretName: 'MySecret'
+|  }
+
+✕  Failed    
+   SecretMissingError: Set a value for MySecret with `sst secret set MySecret <value>`
+       at new Secret (file:///home/kada/Development/playground/leads-landing/.sst/platform/src/components/secret.ts:120:13)
+       at run (file:///home/kada/Development/playground/leads-landing/sst.config.ts:16:20)
+       at run (file:///home/kada/Development/playground/leads-landing/.sst/platform/src/auto/run.ts:19:26)
+       at file:///home/kada/Development/playground/leads-landing/eval.ts:4:28
+       at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+       at ModuleLoader.import (node:internal/modules/esm/loader:316:24) {
+     secretName: 'MySecret'
+   }
+
+SST 3.5.13  ready!
+
+➜  App:        leads-landing
+   Stage:      test
+
+~  Deploy
+
+|  Error       
+|  SecretMissingError: Set a value for MySecret with `sst secret set MySecret <value>`
+|      at new Secret (file:///home/kada/Development/playground/leads-landing/.sst/platform/src/components/secret.ts:120:13)
+|      at run (file:///home/kada/Development/playground/leads-landing/sst.config.ts:16:20)
+|      at run (file:///home/kada/Development/playground/leads-landing/.sst/platform/src/auto/run.ts:19:26)
+|      at file:///home/kada/Development/playground/leads-landing/eval.ts:4:28
+|      at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+|      at ModuleLoader.import (node:internal/modules/esm/loader:316:24) {
+|    secretName: 'MySecret'
+|  }
+
+✕  Failed    
+   SecretMissingError: Set a value for MySecret with `sst secret set MySecret <value>`
+       at new Secret (file:///home/kada/Development/playground/leads-landing/.sst/platform/src/components/secret.ts:120:13)
+       at run (file:///home/kada/Development/playground/leads-landing/sst.config.ts:16:20)
+       at run (file:///home/kada/Development/playground/leads-landing/.sst/platform/src/auto/run.ts:19:26)
+       at file:///home/kada/Development/playground/leads-landing/eval.ts:4:28
+       at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+       at ModuleLoader.import (node:internal/modules/esm/loader:316:24) {
+     secretName: 'MySecret'
+   }
+
